@@ -17,8 +17,12 @@ h1 {
     margin-top: 40px;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 /*Agrega una línea decorativa debajo del titulo*/
- h1::after {
+h1::after {
     content: "";
     display: block;
     width: 150px;
@@ -95,7 +99,6 @@ nav a:hover {
     align-items: center;
     margin: 30px;
     font-size: 19px;
-    font-family: 'Nunito', sans-serif;
     border-radius: 20px;
 }
 
@@ -147,12 +150,13 @@ nav a:hover {
     height: auto;
     border-radius: 15px;
     display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /*Botón*/
-.inicio  a  {
+.inicio a,
+button {
     background-color: #0a569c;
-    font-family: 'Nunito', sans-serif;
     color: #fbf7ee;
     padding: 4px;
     border-radius: 15px;
@@ -172,17 +176,18 @@ nav a:hover {
 /**************************SERVICIOS****************************/
 
 
-/*Contenedor de los servicios*/
-.contenedor-servicios {
+/*Contenedor de los servicios y nosotros*/
+.contenedor-servicios,
+.contenedor-elegirnos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-    font-family: 'Nunito', sans-serif;
 }
 
-/*Cada caja de los servicios*/
-.servicio {
+/*Cada caja de los servicios y cada elegirnos*/
+.servicio,
+.card-elegir {
     background-color: white;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     padding: 30px;
@@ -194,14 +199,16 @@ nav a:hover {
 }
 
 /*Iconos*/
-.servicio i {
+.servicio i,
+.card-elegir i {
     font-size: 45px;
     color: #0a569c;
     margin-bottom: 10px;
 }
 
-/*Nombre del servicio*/
-.servicio h4 {
+/*Nombre del servicio */
+.servicio h4,
+.card-elegir h4 {
     color: #0a569c;
     font-size: 18px;
     margin-top: 10px;
@@ -209,7 +216,8 @@ nav a:hover {
 }
 
 /*Descripción del servicio*/
-.servicio p {
+.servicio p,
+.card-elegir p {
     font-weight: bold;
     margin-top: 10px;
 }
@@ -231,7 +239,7 @@ h2 {
 }
 
 /*Contenedor de los departamentos destacados*/
-.contenedor-deptodestacados{
+.contenedor-deptodestacados {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -262,7 +270,8 @@ h2 {
 }
 
 /*Imagen de cada departamento*/
-.depto-destacado img , .departamento img {
+.depto-destacado img,
+.departamento img {
     width: 500px;
     height: auto;
     border-radius: 15px;
@@ -275,10 +284,9 @@ h2 {
 }
 
 /*Nombre del departamento*/
-.info-depto  h4 {
+.info-depto h4 {
     text-align: center;
     justify-content: center;
-    font-family: 'Nunito', sans-serif;
     color: #08457c;
     margin: 15px;
     font-size: 20px;
@@ -292,22 +300,20 @@ h2 {
     margin: 15px 0;
 }
 
-.datos-depto  p {
+.datos-depto p {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
 }
 
 /*Iconos*/
-.info-depto  i {
+.info-depto i {
     color: #08457c;
     font-size: 25px;
     margin-right: 5px;
 }
 
 /*Botón de ver más*/
-.info-depto  a {
+.info-depto a {
     background-color: #0a569c;
-    font-family: 'Nunito', sans-serif;
     color: #fbf7ee;
     padding: 5px 20px;
     border-radius: 15px;
@@ -330,7 +336,6 @@ h2 {
     padding: 30px;
     display: flex;
     /* Coloca las columnas una al lado de la otra */
-    font-family: 'Nunito', sans-serif;
     font-size: 17px;
     margin: 30px;
     border-radius: 20px;
@@ -416,20 +421,23 @@ h2 {
 /************************DEPARTAMENTOS*********************************/
 
 /*Titulo de la página*/
-.departamentos h1{
+.departamentos h1 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 /*Contenedor de los departamentos*/
-.contenedor-departamentos{
+.contenedor-departamentos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 }
+
 /*Cada tarjeta de los departamentos */
-.departamento{
-    width: 500px; /* probá entre 400 y 450 */
+.departamento {
+    width: 500px;
+    /* probá entre 400 y 450 */
     background-color: white;
     border-radius: 15px;
     padding: 20px;
@@ -437,28 +445,316 @@ h2 {
     box-sizing: border-box;
     margin: 30px;
 }
+
 /*Imágemes*/
-.departamento img{
-   width: 100%;
+.departamento img {
+    width: 100%;
     height: 280px;
     object-fit: cover;
     border-radius: 15px;
     display: block;
 }
+
 /*Precio de cada departamento*/
 .precio {
-    font-family: 'Nunito', sans-serif;
     color: #08457c;
     margin: 15px;
     font-size: 20px;
 }
+
+/************************PÁGINA DE CADA DEPARTAMENTOS**************************/
 /*Descripción de cada departamento*/
-.depto-descripcion{
-  font-family: 'Nunito', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
+.depto-descripcion {
+    font-size: 17px;
+    font-weight: 700;
+}
+/*Precio de cada departamento*/
+.precio-depto {
+    color: #08457c;
+    margin: 15px;
+    font-size: 22px;
+}
+/*Cada tarjeta de los departamentos */
+.detalle-departamento {
+    width: 900px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+}
+/*Nombre del departamento*/
+.nombre-depto {
+    font-size: 25px !important;
+}
+/*Detalle del departamento caracteristicas y servicios*/
+.detalles-depto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+/*Imagen del departamento*/
+.detalle-departamento img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
+.caracteristicas-depto,
+.servicios-depto {
+    width: 48%;
+}
+
+.caracteristicas-depto p,
+.servicios-depto p {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+/*Boton de volver para ver todos los departamentos*/
+.boton-volver {
+    font-size: 17px !important;
+}
+
+/************************ FORMULARIO  DE CONTACTO *********************************/
+
+.formulario-contacto {
+    background-color: #fbf7ee;
+    max-width: 500px;
+    /* Ancho máximo */
+    margin: 50px auto;
+    /* Centra el formulario horizontalmente */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    /* Elementos uno debajo del otro */
+    font-size: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    border-radius: 10px;
+}
+
+/* Texto descriptivo debajo del título */
+.texto-formulario {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* Etiquetas de los campos */
+.formulario-contacto label {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada y área de texto */
+.formulario-contacto input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo cuando el usuario selecciona un campo */
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    /* Elimina el borde predeterminado */
+    border-color: #0a569c;
+}
+
+/* Estilo de los placeholders */
+input::placeholder,
+textarea::placeholder {
+    color: #0a569c;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+}
+
+/* Botón de envío */
+button {
+    font-family: 'Nunito', sans-serif;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #08457c;
+}
+
+
+
+/*****************************NOSOTROS*************************/
+.nosotros h1 {
+    margin: 60px;
+}
+
+/*Iconos de los textos*/
+.nosotros h1 i,
+.texto-ubicacion h2 i,
+.servicios h1 i,
+.departamentos-destacados h2 i,
+.departamentos h1 i {
+    color: #0a569c;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.contenedor-nosotros {
+    background-color: #fbf7ee;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 50px;
+
+}
+
+.frase {
+    color: black;
+    font-size: 25px;
+}
+
+/*Texto de nosotros*/
+.contenedor-nosotros p {
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.8;
+
+}
+
+.contenedor-nosotros img {
+    width: 550px;
+    border-radius: 15px;
+    margin-left: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.texto-nosotros {
+    width: 50%;
+}
+
+/*****************************GALERÍA*************************/
+
+.galeria h2 {
+    margin: 50px;
+}
+
+.galeria h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #0a569c;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.contenedor-galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* permite que bajen de línea si no entran */
+}
+
+.galeria img {
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeria img:hover {
+    box-shadow: 0 8px 16px #3f2c0e;
+}
+
+/*****************************ELEGIRNOS*************************/
+
+.elegirnos h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #0a569c;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.card-elegir {
+    width: 300px;
+    height: 200px;
+}
+
+.card-elegir:hover {
+    box-shadow: 0 8px 16px #3f2c0e;
+}
+
+/*****************************UBICACIÓN*************************/
+
+.ubicacion {
+    background-color: #fbf7ee;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    /* separa texto e imagen */
+    align-items: center;
+    margin: 50px;
+    font-size: 19px;
+    border-radius: 20px;
+}
+
+.texto-ubicacion {
+    width: 40%;
+}
+
+.texto-ubicacion h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #0a569c;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.texto-ubicacion h2 {
+    margin-bottom: 50px;
+}
+
+.texto-ubicacion p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mapa {
+    width: 55%;
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 15px;
+}
 
 
 /*****************************PIE DE PÁGINA*************************/
