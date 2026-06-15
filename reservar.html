@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar Azul - Departamentos - Contacto</title>
+
+    <!--ICONOS-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!--TIPOGRAFÍAS DE GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!--LOGO-->
+            <img src="/img/Logo.png" alt="Logo Mar Azul">
+
+            <!--MENÚ DE NAVEGACIÓN-->
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="departamentos.html">Departamentos</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--FORMULARIO DE RESERVA-->
+
+        <section class="reservar">
+
+            <form action="#" method="post">
+
+                <h2 class="titulo-reserva">Reserva tu estadía</h2>
+
+
+                <div class="formulario-reservar">
+
+                    <p class="texto-formulario">
+                        Complete el siguiente formulario para solicitar su reserva. Nos pondremos en contacto a la
+                        brevedad para confirmar disponibilidad.
+                    </p>
+
+                    <!--NOMBRE -->
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+                    <!--EMAIL-->
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+
+
+                    <!--TELÉFONO-->
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+
+                    <!--OPCIÓN PARA ELEGIR LOS DEPARTAMENTOS-->
+                    <div class="opciones">
+                        <label for="departamento">Departamento</label>
+                        <select id="departamento" name="departamento" required>
+                            <option value="" selected disabled>Seleccione un departamento</option>
+                            <optio vlaue="Premium">Premium</option>
+                                <option value="Suite Playa Norte">Suite Playa Norte</option>
+                                <option value="Loft Costero">Loft Costero</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Monoambiente Moderno">Monoambiente Moderno</option>
+                                <option value="Familiar">Familiar</option>
+                                <option value="Vista al Mar">Vista al Mar</option>
+                                <option vlaue="Moderno">Moderno</option>
+                                <option vlaue="Monoambiente">Monoambiente</option>
+                        </select>
+                    </div>
+
+                    <!--FECHA DE INGRESO-->
+                    <label for="ingreso">Fecha de ingreso</label>
+                    <input type="date" id="ingreso" name="ingreso" required>
+
+
+                    <!--FECHA DE SALIDA-->
+                    <label for="salida">Fecha de salida</label>
+                    <input type="date" id="salida" name="salida" required>
+
+                    <!--CANTIDAD DE HÚESPEDES-->
+                    <label for="huespedes">Cantidad de huéspedes</label>
+                    <input type="number" id="huespedes" name="huespedes" placeholder="Ingresa la cantidad de húespedes"
+                        min="1" max="6" required>
+
+                    <!--MENSAJE-->
+                    <label for="mensaje">Comentarios</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Ingresa el comentario" rows="4"></textarea>
+
+                    <!--BOTÓN-->
+                    <button type="submit">Enviar reserva</button>
+
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+    <!--PIE DE PÁGINA-->
+
+    <footer>
+
+        <!--LOGO-->
+
+        <img src="/img/Logo.png" alt="Logo Mar Azul">
+
+        <div class="footer">
+
+            <!--UBICACIÓN-->
+
+            <div class="footer-ubicacion">
+
+                <h4>ENCONTRANOS</h4>
+
+                <a href="#"><i class="fas fa-map-marker-alt"></i>San Clemente , La Costa</a>
+
+                <p href="#"><i class="fas fa-umbrella-beach"></i>A metros de la playa</p>
+
+            </div>
+
+            <!--CONTACTO-->
+
+            <div class="footer-contacto">
+
+                <h4>CONTACTO</h4>
+
+                <a href="#"><i class="fas fa-phone"></i> 2231345667</a>
+
+                <a href="#"><i class="far fa-envelope"></i>marazulalquileres@gmail.com</a>
+
+            </div>
+
+            <!--REDES SOCIALES-->
+
+            <div class="footer-redes">
+
+                <h4>REDES SOCIALES</h4>
+
+                <a href="#"><i class="fab fa-instagram"></i>marazulalquileres</a>
+
+                <a href="#"><i class="fab fa-facebook"></i>Mar Azul alquileres</a>
+
+            </div>
+
+        </div>
+        <p>© 2026 Mar Azul Alquileres - Todos los derechos reservados</p>
+
+    </footer>
+</body>
+
+</html>

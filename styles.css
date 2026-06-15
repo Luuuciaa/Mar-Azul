@@ -501,10 +501,10 @@ h2 {
     object-fit: cover;
     border-radius: 15px;
 }
-
 .caracteristicas-depto,
 .servicios-depto {
     width: 48%;
+    font-weight: bold;
 }
 
 .caracteristicas-depto p,
@@ -531,9 +531,20 @@ h2 {
    
 }
 
-/************************ FORMULARIO  DE CONTACTO *********************************/
+/************************ FORMULARIO  DE CONTACTO Y RESERVA *********************************/
 
-.formulario-contacto {
+/* Línea decorativa debajo de los títulos */
+.titulo-reserva::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #0a569c;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+/*Estilos de los formularios*/
+.formulario-contacto, .formulario-reservar {
     background-color: #fbf7ee;
     max-width: 500px;
     /* Ancho máximo */
@@ -558,7 +569,7 @@ h2 {
 }
 
 /* Etiquetas de los campos */
-.formulario-contacto label {
+.formulario-contacto label , .formulario-reservar label {
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
@@ -567,7 +578,11 @@ h2 {
 
 /* Campos de entrada y área de texto */
 .formulario-contacto input,
-textarea {
+.formulario-contacto textarea,
+.formulario-contacto select,
+.formulario-reservar input,
+.formulario-reservar textarea,
+.formulario-reservar select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -575,13 +590,17 @@ textarea {
     font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: white;
 }
 
 /* Estilo cuando el usuario selecciona un campo */
 .formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
+.formulario-contacto textarea:focus,
+.formulario-contacto select:focus,
+.formulario-reservar input:focus,
+.formulario-reservar textarea:focus,
+.formulario-reservar select:focus {
     outline: none;
-    /* Elimina el borde predeterminado */
     border-color: #0a569c;
 }
 
@@ -593,7 +612,25 @@ textarea::placeholder {
     font-family: 'Nunito', sans-serif;
     font-style: italic;
 }
-
+/*Opciones de los departamentos*/
+.formulario-reservar select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+select option:disabled {
+    color: #888;
+}
+.formulario-reservar select,
+.formulario-reservar input[type="date"] {
+    color: #0a569c;
+     font-style: italic;
+}
 /* Botón de envío */
 button {
     font-family: 'Nunito', sans-serif;
@@ -609,8 +646,6 @@ button {
 button:hover {
     background-color: #08457c;
 }
-
-
 
 /*****************************NOSOTROS*************************/
 .nosotros h1 {
